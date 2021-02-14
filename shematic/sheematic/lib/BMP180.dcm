@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BMP180
+D Board Mount Pressure Sensors Digital Barometer 12uA, 300-1200hPa
+K
+F http://ae-bst.resource.bosch.com/media/products/dokumente/bmp180/BST-BMP180-DS000-12~1.pdf
+$ENDCMP
+#
+#End Doc Library

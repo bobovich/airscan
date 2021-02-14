@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name bmp180)(type Legacy)(uri /home/ivan/airscan/shematic/sheematic/lib/BMP180.lib)(options "")(descr ""))
+)

@@ -1,0 +1,60 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Pressure:BMP280 U?
+U 1 1 60297DD8
+P 3650 2000
+F 0 "U?" H 3880 2096 50  0000 L CNN
+F 1 "BMP280" H 3880 2005 50  0000 L CNN
+F 2 "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering" H 3650 1300 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001.pdf" H 3650 2000 50  0001 C CNN
+	1    3650 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Gas:CCS811 U?
+U 1 1 60298425
+P 3650 3900
+F 0 "U?" H 3650 4581 50  0000 C CNN
+F 1 "CCS811" H 3650 4490 50  0000 C CNN
+F 2 "Package_LGA:AMS_LGA-10-1EP_2.7x4mm_P0.6mm" H 3650 3300 50  0001 C CNN
+F 3 "http://ams.com/eng/Products/Environmental-Sensors/Air-Quality-Sensors/CCS811" H 3650 3700 50  0001 C CNN
+	1    3650 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Humidity:Si7020-A20 U?
+U 1 1 60299163
+P 5950 1950
+F 0 "U?" H 6394 1996 50  0000 L CNN
+F 1 "Si7020-A20" H 6394 1905 50  0000 L CNN
+F 2 "Package_DFN_QFN:DFN-6-1EP_3x3mm_P1mm_EP1.5x2.4mm" H 5950 1550 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si7020-A20.pdf" H 5750 2250 50  0001 C CNN
+	1    5950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Humidity:ENS210 U?
+U 1 1 602998ED
+P 7300 2000
+F 0 "U?" H 7530 2046 50  0000 L CNN
+F 1 "ENS210" H 7530 1955 50  0000 L CNN
+F 2 "Package_DFN_QFN:AMS_QFN-4-1EP_2x2mm_P0.95mm_EP0.7x1.6mm" H 7300 1600 50  0001 C CNN
+F 3 "http://ams.com/eng/Products/Environmental-Sensors/Relative-Humidity-and-Temperature-Sensors/ENS210" H 7300 2000 50  0001 C CNN
+	1    7300 2000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
