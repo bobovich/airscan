@@ -28,8 +28,8 @@ $Comp
 L Sensor_Gas:CCS811 U3
 U 1 1 60298425
 P 3800 3900
-F 0 "U3" H 3800 4581 50  0000 C CNN
-F 1 "CCS811" H 3800 4490 50  0000 C CNN
+F 0 "U3" H 4250 4500 50  0000 C CNN
+F 1 "CCS811" H 4350 4350 50  0000 C CNN
 F 2 "Package_LGA:AMS_LGA-10-1EP_2.7x4mm_P0.6mm" H 3800 3300 50  0001 C CNN
 F 3 "http://ams.com/eng/Products/Environmental-Sensors/Air-Quality-Sensors/CCS811" H 3800 3700 50  0001 C CNN
 	1    3800 3900
@@ -55,27 +55,6 @@ F 1 "ENS210" H 9280 1855 50  0000 L CNN
 F 2 "Package_DFN_QFN:AMS_QFN-4-1EP_2x2mm_P0.95mm_EP0.7x1.6mm" H 9050 1500 50  0001 C CNN
 F 3 "http://ams.com/eng/Products/Environmental-Sensors/Relative-Humidity-and-Temperature-Sensors/ENS210" H 9050 1900 50  0001 C CNN
 	1    9050 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L sheematic-rescue:BMP180-bmp180 IC?
-U 1 1 60297945
-P 1300 1850
-AR Path="/60297945" Ref="IC?"  Part="1" 
-AR Path="/60296418/60297945" Ref="IC1"  Part="1" 
-F 0 "IC1" H 1850 2115 50  0000 C CNN
-F 1 "BMP180" H 1850 2024 50  0000 C CNN
-F 2 "BMP180" H 2250 1950 50  0001 L CNN
-F 3 "http://ae-bst.resource.bosch.com/media/products/dokumente/bmp180/BST-BMP180-DS000-12~1.pdf" H 2250 1850 50  0001 L CNN
-F 4 "Board Mount Pressure Sensors Digital Barometer 12uA, 300-1200hPa" H 2250 1750 50  0001 L CNN "Description"
-F 5 "" H 2250 1650 50  0001 L CNN "Height"
-F 6 "Bosch Sensortec" H 2250 1550 50  0001 L CNN "Manufacturer_Name"
-F 7 "BMP180" H 2250 1450 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "262-BMP180" H 2250 1350 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMP180/?qs=d72FGnIDsgTlLIC5YM2WKA%3D%3D" H 2250 1250 50  0001 L CNN "Mouser Price/Stock"
-F 10 "" H 2250 1150 50  0001 L CNN "Arrow Part Number"
-F 11 "" H 2250 1050 50  0001 L CNN "Arrow Price/Stock"
-	1    1300 1850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -301,4 +280,172 @@ Wire Wire Line
 	5250 800  5250 1000
 Wire Wire Line
 	5550 800  5550 1000
+Wire Wire Line
+	4200 3800 4400 3800
+Wire Wire Line
+	4400 3800 4400 3700
+Wire Wire Line
+	4400 3700 4200 3700
+$Comp
+L Device:R R3
+U 1 1 602F09AB
+P 2900 3200
+F 0 "R3" H 2970 3246 50  0000 L CNN
+F 1 "R" H 2970 3155 50  0000 L CNN
+F 2 "" V 2830 3200 50  0001 C CNN
+F 3 "~" H 2900 3200 50  0001 C CNN
+	1    2900 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 602F1D71
+P 2900 3450
+F 0 "R4" H 2970 3496 50  0000 L CNN
+F 1 "R" H 2970 3405 50  0000 L CNN
+F 2 "" V 2830 3450 50  0001 C CNN
+F 3 "~" H 2900 3450 50  0001 C CNN
+	1    2900 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR08
+U 1 1 602F328C
+P 3800 3200
+F 0 "#PWR08" H 3800 3050 50  0001 C CNN
+F 1 "+3.3V" H 3815 3373 50  0000 C CNN
+F 2 "" H 3800 3200 50  0001 C CNN
+F 3 "" H 3800 3200 50  0001 C CNN
+	1    3800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4400 3800 4600
+$Comp
+L power:GND #PWR07
+U 1 1 602F5766
+P 2550 3450
+F 0 "#PWR07" H 2550 3200 50  0001 C CNN
+F 1 "GND" H 2555 3277 50  0000 C CNN
+F 2 "" H 2550 3450 50  0001 C CNN
+F 3 "" H 2550 3450 50  0001 C CNN
+	1    2550 3450
+	0    1    1    0   
+$EndComp
+Text GLabel 3400 3800 0    50   Input ~ 0
+SDA
+Text GLabel 3400 3900 0    50   Input ~ 0
+SCL
+Text GLabel 3400 4200 0    50   Input ~ 0
+CCS811_nWAKE
+Wire Wire Line
+	3800 3200 3800 3300
+Wire Wire Line
+	3050 3450 3100 3450
+Wire Wire Line
+	3100 3450 3100 3200
+Wire Wire Line
+	3100 3200 3050 3200
+Wire Wire Line
+	3400 3600 3100 3600
+Wire Wire Line
+	3100 3600 3100 3450
+Connection ~ 3100 3450
+Wire Wire Line
+	2750 3450 2550 3450
+Wire Wire Line
+	2750 3200 2650 3200
+Wire Wire Line
+	2650 3200 2650 3300
+Wire Wire Line
+	2650 3300 3800 3300
+Connection ~ 3800 3300
+Wire Wire Line
+	3800 3300 3800 3400
+Text GLabel 3400 3700 0    50   Input ~ 0
+CCS811_nINT
+Text GLabel 3400 4100 0    50   Input ~ 0
+CCS811_nRESET
+$Comp
+L Device:R R5
+U 1 1 602FAD96
+P 6000 3350
+F 0 "R5" H 6070 3396 50  0000 L CNN
+F 1 "R" H 6070 3305 50  0000 L CNN
+F 2 "" V 5930 3350 50  0001 C CNN
+F 3 "~" H 6000 3350 50  0001 C CNN
+	1    6000 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 602FB5A3
+P 6250 3350
+F 0 "R6" H 6320 3396 50  0000 L CNN
+F 1 "R" H 6320 3305 50  0000 L CNN
+F 2 "" V 6180 3350 50  0001 C CNN
+F 3 "~" H 6250 3350 50  0001 C CNN
+	1    6250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 602FB83C
+P 6500 3350
+F 0 "R7" H 6570 3396 50  0000 L CNN
+F 1 "R" H 6570 3305 50  0000 L CNN
+F 2 "" V 6430 3350 50  0001 C CNN
+F 3 "~" H 6500 3350 50  0001 C CNN
+	1    6500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR09
+U 1 1 602FBB2F
+P 6250 3000
+F 0 "#PWR09" H 6250 2850 50  0001 C CNN
+F 1 "+3.3V" H 6265 3173 50  0000 C CNN
+F 2 "" H 6250 3000 50  0001 C CNN
+F 3 "" H 6250 3000 50  0001 C CNN
+	1    6250 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3200 6000 3050
+Wire Wire Line
+	6000 3050 6250 3050
+Wire Wire Line
+	6250 3050 6250 3000
+Wire Wire Line
+	6500 3200 6500 3050
+Wire Wire Line
+	6500 3050 6250 3050
+Connection ~ 6250 3050
+Wire Wire Line
+	6250 3200 6250 3050
+Text GLabel 6000 3500 3    50   Input ~ 0
+CCS811_nINT
+Text GLabel 6250 3500 3    50   Input ~ 0
+CCS811_nRESET
+Text GLabel 6500 3500 3    50   Input ~ 0
+CCS811_nWAKE
+$Comp
+L SamacSys_Parts:BMP180 IC1
+U 1 1 60316D2F
+P 1300 1850
+F 0 "IC1" H 1850 2115 50  0000 C CNN
+F 1 "BMP180" H 1850 2024 50  0000 C CNN
+F 2 "Sensor:BMP180" H 2250 1950 50  0001 L CNN
+F 3 "http://ae-bst.resource.bosch.com/media/products/dokumente/bmp180/BST-BMP180-DS000-12~1.pdf" H 2250 1850 50  0001 L CNN
+F 4 "Board Mount Pressure Sensors Digital Barometer 12uA, 300-1200hPa" H 2250 1750 50  0001 L CNN "Description"
+F 5 "" H 2250 1650 50  0001 L CNN "Height"
+F 6 "Bosch Sensortec" H 2250 1550 50  0001 L CNN "Manufacturer_Name"
+F 7 "BMP180" H 2250 1450 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "262-BMP180" H 2250 1350 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMP180/?qs=d72FGnIDsgTlLIC5YM2WKA%3D%3D" H 2250 1250 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 2250 1150 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 2250 1050 50  0001 L CNN "Arrow Price/Stock"
+	1    1300 1850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

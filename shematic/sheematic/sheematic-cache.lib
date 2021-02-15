@@ -85,6 +85,44 @@ X Pin_7 7 200 -300 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Conn_01x08_Male
+#
+DEF Connector_Conn_01x08_Male J 0 40 Y N 1 F N
+F0 "J" 0 400 50 H V C CNN
+F1 "Connector_Conn_01x08_Male" 0 -500 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S 34 -395 0 -405 1 1 6 F
+S 34 -295 0 -305 1 1 6 F
+S 34 -195 0 -205 1 1 6 F
+S 34 -95 0 -105 1 1 6 F
+S 34 5 0 -5 1 1 6 F
+S 34 105 0 95 1 1 6 F
+S 34 205 0 195 1 1 6 F
+S 34 305 0 295 1 1 6 F
+P 2 1 1 6 50 -400 34 -400 N
+P 2 1 1 6 50 -300 34 -300 N
+P 2 1 1 6 50 -200 34 -200 N
+P 2 1 1 6 50 -100 34 -100 N
+P 2 1 1 6 50 0 34 0 N
+P 2 1 1 6 50 100 34 100 N
+P 2 1 1 6 50 200 34 200 N
+P 2 1 1 6 50 300 34 300 N
+X Pin_1 1 200 300 150 L 50 50 1 1 P
+X Pin_2 2 200 200 150 L 50 50 1 1 P
+X Pin_3 3 200 100 150 L 50 50 1 1 P
+X Pin_4 4 200 0 150 L 50 50 1 1 P
+X Pin_5 5 200 -100 150 L 50 50 1 1 P
+X Pin_6 6 200 -200 150 L 50 50 1 1 P
+X Pin_7 7 200 -300 150 L 50 50 1 1 P
+X Pin_8 8 200 -400 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_C
 #
 DEF Device_C C 0 10 N Y 1 F N
@@ -200,6 +238,30 @@ X P0.26 6 900 -900 100 L 50 50 1 1 B
 X P0.27 7 900 -1000 100 L 50 50 1 1 B
 X AIN4/P0.28 8 900 -1100 100 L 50 50 1 1 B
 X AIN5/P0.29 9 900 -1200 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_BMP180
+#
+DEF SamacSys_Parts_BMP180 IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "SamacSys_Parts_BMP180" 950 200 50 H V L CNN
+F2 "BMP180" 950 100 50 H I L CNN
+F3 "http://ae-bst.resource.bosch.com/media/products/dokumente/bmp180/BST-BMP180-DS000-12~1.pdf" 950 0 50 H I L CNN
+F4 "Board Mount Pressure Sensors Digital Barometer 12uA, 300-1200hPa" 950 -100 50 H I L CNN "Description"
+F5 "Bosch Sensortec" 950 -300 50 H I L CNN "Manufacturer_Name"
+F6 "BMP180" 950 -400 50 H I L CNN "Manufacturer_Part_Number"
+F7 "262-BMP180" 950 -500 50 H I L CNN "Mouser Part Number"
+F8 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMP180/?qs=d72FGnIDsgTlLIC5YM2WKA%3D%3D" 950 -600 50 H I L CNN "Mouser Price/Stock"
+DRAW
+P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
+X CSB 1 0 0 200 R 50 50 0 0 I
+X VDD 2 0 -100 200 R 50 50 0 0 W
+X VDDIO 3 0 -200 200 R 50 50 0 0 W
+X SDO 4 0 -300 200 R 50 50 0 0 P
+X SCL 5 1100 0 200 L 50 50 0 0 P
+X SDA 6 1100 -100 200 L 50 50 0 0 P
+X GND 7 1100 -200 200 L 50 50 0 0 W
 ENDDRAW
 ENDDEF
 #
@@ -321,30 +383,6 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# sheematic-rescue_BMP180-bmp180
-#
-DEF sheematic-rescue_BMP180-bmp180 IC 0 30 Y Y 1 F N
-F0 "IC" 950 300 50 H V L CNN
-F1 "sheematic-rescue_BMP180-bmp180" 950 200 50 H V L CNN
-F2 "BMP180" 950 100 50 H I L CNN
-F3 "http://ae-bst.resource.bosch.com/media/products/dokumente/bmp180/BST-BMP180-DS000-12~1.pdf" 950 0 50 H I L CNN
-F4 "Board Mount Pressure Sensors Digital Barometer 12uA, 300-1200hPa" 950 -100 50 H I L CNN "Description"
-F5 "Bosch Sensortec" 950 -300 50 H I L CNN "Manufacturer_Name"
-F6 "BMP180" 950 -400 50 H I L CNN "Manufacturer_Part_Number"
-F7 "262-BMP180" 950 -500 50 H I L CNN "Mouser Part Number"
-F8 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMP180/?qs=d72FGnIDsgTlLIC5YM2WKA%3D%3D" 950 -600 50 H I L CNN "Mouser Price/Stock"
-DRAW
-P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
-X CSB 1 0 0 200 R 50 50 0 0 I
-X VDD 2 0 -100 200 R 50 50 0 0 W
-X VDDIO 3 0 -200 200 R 50 50 0 0 W
-X SDO 4 0 -300 200 R 50 50 0 0 P
-X SCL 5 1100 0 200 L 50 50 0 0 P
-X SDA 6 1100 -100 200 L 50 50 0 0 P
-X GND 7 1100 -200 200 L 50 50 0 0 W
 ENDDRAW
 ENDDEF
 #
